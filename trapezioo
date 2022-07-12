@@ -1,0 +1,85 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled19.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOaVKcSicViJ1GYUAuOH0Hb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/caveroni/T1-calculonumerico/blob/main/trapezioo\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h3a5RsuBIy1x",
+        "outputId": "410e6857-cfbe-48fb-d4b0-2f844d355850"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4.6708037019044\n"
+          ]
+        }
+      ],
+      "source": [
+        "#rega dos trapezios\n",
+        "import math\n",
+        "import numpy as np\n",
+        "def f(x):\n",
+        "  return (math.exp(x))\n",
+        "\n",
+        "a = 1\n",
+        "b = 2\n",
+        "n = 115\n",
+        "\n",
+        "h = (b-a)/n\n",
+        "\n",
+        "soma = 0\n",
+        "for i in range(1, n):\n",
+        "  soma = soma + f(h*i + a)\n",
+        "\n",
+        "equacao = (h/2) * (f(a) + 2*soma + f(b))\n",
+        "\n",
+        "print(equacao)\n",
+        "\n",
+        "#definir numero de intervalo"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "zIYZ0xaXNapE"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
